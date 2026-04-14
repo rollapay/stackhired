@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Search, MapPin, Briefcase, DollarSign, Clock, Star } from 'lucide-react'
+import AICrawler from '@/components/jobs/AICrawler'
 
 export const metadata: Metadata = {
   title: 'Browse Jobs',
@@ -218,6 +219,16 @@ export default function BrowseJobsPage() {
             Load more jobs
           </button>
         </div>
+
+        {/* Divider */}
+        <div className="flex items-center gap-4 mt-16 mb-2">
+          <div className="flex-1 h-px" style={{ backgroundColor: 'rgba(255,255,255,0.06)' }} />
+          <span className="text-xs text-gray-600 font-medium tracking-widest uppercase">AI Crawler</span>
+          <div className="flex-1 h-px" style={{ backgroundColor: 'rgba(255,255,255,0.06)' }} />
+        </div>
+
+        {/* AI-powered SF jobs crawler */}
+        <AICrawler />
       </div>
     </div>
   )
